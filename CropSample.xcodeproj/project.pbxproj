@@ -12,6 +12,8 @@
 		0DA08AFE1F4D7A82003F2D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA08AFC1F4D7A82003F2D2F /* Main.storyboard */; };
 		0DA08B001F4D7A82003F2D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA08AFF1F4D7A82003F2D2F /* Assets.xcassets */; };
 		0DA08B031F4D7A82003F2D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA08B011F4D7A82003F2D2F /* LaunchScreen.storyboard */; };
+		0DA08B0B1F4EAFE2003F2D2F /* UIImageView+ imageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA08B0A1F4EAFE2003F2D2F /* UIImageView+ imageFrame.swift */; };
+		0DA08B0D1F4EB55F003F2D2F /* CropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA08B0C1F4EB55F003F2D2F /* CropAreaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0DA08AFF1F4D7A82003F2D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA08B021F4D7A82003F2D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA08B041F4D7A82003F2D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA08B0A1F4EAFE2003F2D2F /* UIImageView+ imageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ imageFrame.swift"; sourceTree = "<group>"; };
+		0DA08B0C1F4EB55F003F2D2F /* CropAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 				0DA08AF81F4D7A82003F2D2F /* AppDelegate.swift */,
 				0DA08AFA1F4D7A82003F2D2F /* ViewController.swift */,
 				0DA08AFC1F4D7A82003F2D2F /* Main.storyboard */,
+				0DA08B0C1F4EB55F003F2D2F /* CropAreaView.swift */,
 				0DA08AFF1F4D7A82003F2D2F /* Assets.xcassets */,
 				0DA08B011F4D7A82003F2D2F /* LaunchScreen.storyboard */,
 				0DA08B041F4D7A82003F2D2F /* Info.plist */,
+				0DA08B0A1F4EAFE2003F2D2F /* UIImageView+ imageFrame.swift */,
 			);
 			path = CropSample;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA08AFB1F4D7A82003F2D2F /* ViewController.swift in Sources */,
+				0DA08B0D1F4EB55F003F2D2F /* CropAreaView.swift in Sources */,
+				0DA08B0B1F4EAFE2003F2D2F /* UIImageView+ imageFrame.swift in Sources */,
 				0DA08AF91F4D7A82003F2D2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +312,7 @@
 				0DA08B091F4D7A82003F2D2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

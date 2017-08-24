@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CropSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-To-hP2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-Ju-tOT" customClass="CropAreaView" customModule="CropSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243.5" width="374" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1cT-Ju-tOT" secondAttribute="height" multiplier="187:80" id="mYT-L7-UE5"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wide" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-of-94N">
+                                        <rect key="frame" x="0.0" y="136.5" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZnQ-of-94N" secondAttribute="height" multiplier="1:1" id="wei-MT-zh3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-Ja-t1f">
+                                        <rect key="frame" x="172" y="570" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="crop"/>
+                                        <connections>
+                                            <action selector="crop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4W-wc-nNn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZnQ-of-94N" firstAttribute="centerY" secondItem="zEj-To-hP2" secondAttribute="centerY" id="2GI-kv-FNf"/>
+                                    <constraint firstItem="1cT-Ju-tOT" firstAttribute="leading" secondItem="zEj-To-hP2" secondAttribute="leading" id="8ZR-Im-IrT"/>
+                                    <constraint firstItem="1cT-Ju-tOT" firstAttribute="centerY" secondItem="zEj-To-hP2" secondAttribute="centerY" id="Gui-OR-ejH"/>
+                                    <constraint firstItem="ZnQ-of-94N" firstAttribute="centerX" secondItem="zEj-To-hP2" secondAttribute="centerX" id="YeC-W6-sJl"/>
+                                    <constraint firstAttribute="trailing" secondItem="1cT-Ju-tOT" secondAttribute="trailing" id="c1J-of-pGT"/>
+                                    <constraint firstItem="ZnQ-of-94N" firstAttribute="leading" secondItem="zEj-To-hP2" secondAttribute="leading" id="not-BI-nUi"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZnQ-of-94N" secondAttribute="bottom" constant="128" id="pNz-Mm-PjY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZnQ-of-94N" secondAttribute="trailing" id="ra1-oK-6Qj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zEj-To-hP2" secondAttribute="bottom" id="C5F-uZ-ZJK"/>
+                            <constraint firstItem="zEj-To-hP2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WKP-HH-Fb4"/>
+                            <constraint firstAttribute="trailing" secondItem="zEj-To-hP2" secondAttribute="trailing" id="iNc-Tn-EFw"/>
+                            <constraint firstItem="zEj-To-hP2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ng3-aB-yMc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cropAreaView" destination="1cT-Ju-tOT" id="5hR-Uv-aCB"/>
+                        <outlet property="imageView" destination="ZnQ-of-94N" id="DeI-B6-eQO"/>
+                        <outlet property="scrollView" destination="zEj-To-hP2" id="C3u-62-Ife"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wide" width="4032" height="3024"/>
+    </resources>
 </document>
