@@ -25,22 +25,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-To-hP2">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-Ju-tOT" customClass="CropAreaView" customModule="CropSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="243.5" width="374" height="160"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="1cT-Ju-tOT" secondAttribute="height" multiplier="187:80" id="mYT-L7-UE5"/>
-                                        </constraints>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wide" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-of-94N">
                                         <rect key="frame" x="0.0" y="136.5" width="374" height="374"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZnQ-of-94N" secondAttribute="height" multiplier="1:1" id="wei-MT-zh3"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-Ja-t1f">
-                                        <rect key="frame" x="172" y="570" width="31" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-Ju-tOT" customClass="CropAreaView" customModule="CropSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="374" height="160"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1cT-Ju-tOT" secondAttribute="height" multiplier="187:80" id="mYT-L7-UE5"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-Ja-t1f">
+                                        <rect key="frame" x="172" y="588.5" width="31" height="30"/>
                                         <state key="normal" title="crop"/>
                                         <connections>
                                             <action selector="crop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4W-wc-nNn"/>
@@ -49,8 +48,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ZnQ-of-94N" firstAttribute="centerY" secondItem="zEj-To-hP2" secondAttribute="centerY" id="2GI-kv-FNf"/>
+                                    <constraint firstAttribute="bottom" secondItem="sdz-Ja-t1f" secondAttribute="bottom" constant="20" id="7xM-QE-Pfq"/>
                                     <constraint firstItem="1cT-Ju-tOT" firstAttribute="leading" secondItem="zEj-To-hP2" secondAttribute="leading" id="8ZR-Im-IrT"/>
                                     <constraint firstItem="1cT-Ju-tOT" firstAttribute="centerY" secondItem="zEj-To-hP2" secondAttribute="centerY" id="Gui-OR-ejH"/>
+                                    <constraint firstItem="sdz-Ja-t1f" firstAttribute="centerX" secondItem="zEj-To-hP2" secondAttribute="centerX" id="QAw-Ht-09l"/>
                                     <constraint firstItem="ZnQ-of-94N" firstAttribute="centerX" secondItem="zEj-To-hP2" secondAttribute="centerX" id="YeC-W6-sJl"/>
                                     <constraint firstAttribute="trailing" secondItem="1cT-Ju-tOT" secondAttribute="trailing" id="c1J-of-pGT"/>
                                     <constraint firstItem="ZnQ-of-94N" firstAttribute="leading" secondItem="zEj-To-hP2" secondAttribute="leading" id="not-BI-nUi"/>
